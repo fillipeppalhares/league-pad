@@ -1,5 +1,5 @@
 <%= @champion.name %>
 
 <% @champions.each do |champion| %>
-  <div><%= link_to champion.name, "#" %></div>
+  <div><%= link_to champion.name, champion_notes_path(id: @champion.id, champion_id: champion.id) %></div>
 <% end %>
