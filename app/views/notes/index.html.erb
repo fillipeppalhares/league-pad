@@ -1,1 +1,5 @@
-<%= @params.inspect %>
+<%= link_to "New", new_champion_note_path(champion_id: @champion_id, adversary_champion_id: @adversary_champion_id) %>
+
+<% @notes.each do |note| %>
+  <div><b>Body: </b><%= note.body %></div>
+<% end %>

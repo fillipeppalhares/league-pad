@@ -1,3 +1,11 @@
-<% @champions.each do |champion| %>
-  <div><%= link_to champion.name, champion %></div>
-<% end %>
+<div class = "d-flex flex-wrap">
+  <% @champions.each do |champion| %>
+    <%= link_to champion do %>
+      <div class="card" style="width: 6rem;">
+
+        <%= image_tag "https://ddragon.leagueoflegends.com/cdn/12.10.1/img/champion/#{champion.image_name}", class: "card-img-top" %>
+          <p class="card-header"><%= champion.name %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>

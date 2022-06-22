@@ -9,7 +9,8 @@ class ChampionRetriever < ApplicationService
     @data.map do |key, value|
       champion_name = value["name"]
       champion_tags = value["tags"]
-      content = {name: champion_name, tags: champion_tags}
+      champion_image_name = value["image"]["full"]
+      content = {name: champion_name, tags: champion_tags, image_name: champion_image_name}
       Champion.create!(content)
     end
   end

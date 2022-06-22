@@ -1,5 +1,5 @@
 class ChampionsController < ApplicationController
-  before_action :set_champion, only: %i[ show ]
+  before_action :set_champion, only: %i[show]
 
   def index
     @champions = Champion.all
@@ -15,3 +15,10 @@ class ChampionsController < ApplicationController
     @champion = Champion.find(params[:id])
   end
 end
+
+
+
+# você cadastra um plano de jogo do seu campeão contra o campeão adversário ao estilo skillcapped
+# ao fim do jogo, fala se venceu a partida
+# lista de planos de jogo contra aquele campeão com estatísticas
+# no futuro, olha as estatísticas do jogo (?)
