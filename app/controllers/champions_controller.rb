@@ -19,6 +19,6 @@ end
 
 
 # você cadastra um plano de jogo do seu campeão contra o campeão adversário ao estilo skillcapped
-# ao fim do jogo, fala se venceu a partida
+# ao fim do jogo, fala se venceu a partida / usa api do lol para saber se venceu
 # lista de planos de jogo contra aquele campeão com estatísticas
 # no futuro, olha as estatísticas do jogo (?)
