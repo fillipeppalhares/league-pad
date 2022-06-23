@@ -22,3 +22,6 @@ end
 # ao fim do jogo, fala se venceu a partida
 # lista de planos de jogo contra aquele campeão com estatísticas / avalia sinergia com campeões aliados e interação com campeões inimigos
 # no futuro, olha as estatísticas do jogo (?)
+# ao fim do jogo, fala se venceu a partida / usa api do lol para saber se venceu
+# lista de planos de jogo contra aquele campeão com estatísticas
+# no futuro, olha as estatísticas do jogo (?)
