@@ -24,3 +24,5 @@ Things you may want to cover:
 * ...
 
 * Git testing
+
+* Test amend
