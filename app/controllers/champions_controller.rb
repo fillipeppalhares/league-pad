@@ -20,5 +20,5 @@ end
 
 # você cadastra um plano de jogo do seu campeão contra o campeão adversário ao estilo skillcapped
 # ao fim do jogo, fala se venceu a partida
-# lista de planos de jogo contra aquele campeão com estatísticas
+# lista de planos de jogo contra aquele campeão com estatísticas / avalia sinergia com campeões aliados e interação com campeões inimigos
 # no futuro, olha as estatísticas do jogo (?)
