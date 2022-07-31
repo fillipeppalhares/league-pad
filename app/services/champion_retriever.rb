@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ChampionRetriever < ApplicationService
   def initialize
     @url = "https://ddragon.leagueoflegends.com/cdn/12.8.1/data/en_US/champion.json"

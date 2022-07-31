@@ -1,0 +1,11 @@
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Style/Documentation:
+  Enabled: false
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: never
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
