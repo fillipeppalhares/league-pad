@@ -9,7 +9,7 @@ class TagRetriever < ApplicationService
   end
 
   def call
-    retrieve_tags_from_all_champions.reduce(:+).uniq
+    retrieve_tags_from_all_champions.reduce(:+).uniq.sort.map { |tag| Tag.create!(name: tag) }
   end
 
   private

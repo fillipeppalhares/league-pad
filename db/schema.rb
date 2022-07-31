@@ -10,28 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_220_602_012_645) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_31_144242) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "champions", force: :cascade do |t|
     t.string "name"
-    t.string "tags", default: [], array: true
+    t.string "key"
+    t.string "moniker"
+    t.string "image_endpath"
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image_name"
   end
 
-  create_table "notes", force: :cascade do |t|
-    t.text "body"
+  create_table "champions_tags", id: false, force: :cascade do |t|
     t.bigint "champion_id", null: false
-    t.bigint "adversary_champion_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["adversary_champion_id"], name: "index_notes_on_adversary_champion_id"
-    t.index ["champion_id"], name: "index_notes_on_champion_id"
+    t.bigint "tag_id", null: false
+    t.index ["champion_id"], name: "index_champions_tags_on_champion_id"
+    t.index ["tag_id"], name: "index_champions_tags_on_tag_id"
   end
 
-  add_foreign_key "notes", "champions"
-  add_foreign_key "notes", "champions", column: "adversary_champion_id"
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
